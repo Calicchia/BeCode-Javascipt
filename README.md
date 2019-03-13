@@ -2,7 +2,7 @@
 
 ## Curriculum
 ## part 1
-01 - Variabelen
+01 - <a>Variabelen</a>
 02 - Vergelijkingen
 03 - Functies
 04 - Arrays
