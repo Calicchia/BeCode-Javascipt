@@ -1,4 +1,5 @@
 # [Javascript](https://calicchia.github.io/BeCode-Javascipt/)
+  je kan de uitkomsten zien bij de console.log()
 
 ## Curriculum
 ## part 1
