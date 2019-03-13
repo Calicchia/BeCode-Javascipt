@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+</head>
+<body>
+
+<div class="hoverMe">
+  LIJN 1
+</div>
+<div class="hoverMe">
+  LIJN 2
+</div>
+<div class="hoverMe">
+  LIJN 3
+</div>
+<div id="reset">
+  RESET
+</div>
+<div id="x-axis">
+  x-axis
+</div>
+<div id="y-axis">
+  y-axis
+</div>
+
+<script>
+function hide(event){
+  event.target.style.opacity = "0"
+}
+var a = document.getElementsByClassName("hoverMe");
+for (var i = 0; i < a.length; i++) {
+  a[i].style.backgroundColor = "#fc8888"
+  a[i].style.fontSize = "20px"
+  a[i].style.textAlign = "center"
+  a[i].style.width = "50%"
+  a[i].style.margin = "auto"
+  a[i].style.marginTop = "10px"
+  a[i].style.marginBottom = "10px"
+  a[i].style.borderRadius = "10px"
+  a[i].addEventListener("mouseenter", hide)  // addEventListener kijkt of de "mouseenter" wordt toegepast
+}
+
+
+function reset(event){
+  for (var i = 0; i < a.length; i++) {
+    a[i].style.opacity = "1"
+  }
+}
+function selected(event){
+  event.target.style.backgroundColor = "blue"
+}
+function unselected(event){
+  event.target.style.backgroundColor = "red"
+}
+
+
+let reset_div = document.getElementById("reset");
+reset_div.style.backgroundColor = "red"
+reset_div.style.fontSize = "20px"
+reset_div.style.textAlign = "center"
+reset_div.style.width = "50%"
+reset_div.style.margin = "auto"
+reset_div.style.paddingTop = "5px"
+reset_div.style.paddingBottom = "5px"
+reset_div.style.borderRadius = "10px"
+reset_div.addEventListener("click", reset);
+reset_div.addEventListener("mouseover", selected);
+reset_div.addEventListener("mouseout", unselected);
+
+function xy(event){                       // "event" =  een object en bevat meer informatie
+  x.innerHTML = "x :" + event.pageX.toString()
+  y.innerHTML = "y :" + event.pageY.toString()
+}
+
+var x = document.getElementById("x-axis");
+var y = document.getElementById("y-axis");
+var html = document.querySelector("html");
+x.style.backgroundColor = "#bdbaf2"
+x.style.fontSize = "20px"
+x.style.textAlign = "center"
+x.style.width = "10%"
+x.style.paddingTop = "5px"
+x.style.paddingBottom = "5px"
+x.style.borderRadius = "10px"
+y.style.backgroundColor = "#9793e2"
+y.style.fontSize = "20px"
+y.style.textAlign = "center"
+y.style.width = "10%"
+y.style.paddingTop = "5px"
+y.style.paddingBottom = "5px"
+y.style.borderRadius = "10px"
+html.addEventListener("mousemove", xy);
+
+
+</script>
+
+</body>
+</html>

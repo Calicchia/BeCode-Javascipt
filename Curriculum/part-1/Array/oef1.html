@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+</head>
+<body>
+    <script>
+
+    function sumList(numbersList){
+      let result = 0;
+      for (let i = 0; i < numbersList.length; i++) {
+        result +=  numbersList[i]
+      }
+      console.log(result)
+    }
+
+
+    let numbers = [1, 2, 3, 3, 4, 5, 6, 7, 8, 9];
+    let age = [1, 2, 3, 3, 99, 5, 6, 7, 8, 9];
+
+    sumList(numbers)
+    sumList(age)
+
+
+    </script>
+</body>
+</html>

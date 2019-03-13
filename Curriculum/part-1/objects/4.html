@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+</head>
+<body>
+    <script>
+
+    function Char(name, level, life, weapon, attack, receiveDamage) {
+      this.name = name;
+      this.level = level;
+      this.life = life;
+      this.weapon = weapon;
+      this.attack = attack;
+      this.receiveDamage = receiveDamage;
+    };
+
+    let mainChar = new Char ("Gianni", 20, 100, {name:"Axe", damage:5},
+    function(){
+      console.log(mainChar.name + " valt Sandy aan met zijn " + mainChar.weapon.name
+      + " de schade is " + (mainChar.weapon.damage).toString());
+    },
+        function(damage){
+        mainChar.life = mainChar.life - damage;
+        }
+    );
+
+    let opp = new Char ("Sandy", 20, 100, {name:"staff", damage:3},
+    function(){
+      console.log(opp.name + " valt Gianni aan met haar " + opp.weapon.name
+      + " de schade is " + (opp.weapon.damage).toString());
+    },
+        function(damage){
+        opp.life = opp.life - damage;
+        }
+    );
+
+    while (mainChar.life > 0 && opp.life > 0) {
+      mainChar.attack();
+      opp.receiveDamage(mainChar.weapon.damage);
+      console.log("Sandy haar leven is", opp.life);
+      opp.attack();
+      mainChar.receiveDamage(opp.weapon.damage);
+      console.log("Gianni zijn leven is", mainChar.life);
+    }
+
+    </script>
+</body>
+</html>

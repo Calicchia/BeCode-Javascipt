@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+</head>
+<body>
+    <script>
+
+    let mainCharacter = {
+      name: "Gianni",
+      level: 100,
+      life: 20,
+      weapon: {name:"staff", damage: 50},
+      attack : function(){
+        console.log(mainCharacter.name + " valt aan met het wapen " + mainCharacter.weapon.name
+        + " de schade is " +  (mainCharacter.weapon.damage * mainCharacter.level).toString());
+      }
+    }
+
+      mainCharacter.attack();
+
+    </script>
+</body>
+</html>

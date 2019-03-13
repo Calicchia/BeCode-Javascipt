@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+</head>
+<body>
+    <script>
+
+    function Char(name, level, life, weapon, weer, attack, receiveDamage) {
+      this.name = name;
+      this.level = level;
+      this.life = life;
+      this.weapon = weapon;
+      this.weer = weer;
+
+      this.weather = function(weather){
+      console.log("het is vandaag een " + " " + this.weer.name + " " + "dag");
+      }
+
+      this.attack = function(){
+        console.log(this.name + " valt aan met een " + this.weapon.name
+         + " en de schade is " + (this.weapon.damage).toString());
+      }
+
+      this.receiveDamage = function(damage) {
+        this.life = this.life - damage;
+      }
+    }
+
+
+
+    let mainChar = new Char("gianni", 20, 100, {name:"Axe", damage:5}, {name:"zonnig", "donkere", "regenachtige"});
+    let b = Math.floor(Math.random() * this.weer.name.length);
+    let opp = new Char("Selene", 20, 100, {name:"Axe", damage:3});
+
+
+
+
+
+    while(mainChar.life > 0 && opp.life > 0){
+      mainChar.weather(mainChar.weer[b]);
+      mainChar.attack();
+      opp.receiveDamage(mainChar.weapon.damage);
+      console.log(" Selene haar leven is", opp.life);
+      opp.attack();
+      mainChar.receiveDamage(opp.weapon.damage);
+      console.log(" Gianni haar leven is", mainChar.life);
+      console.log("\n");
+    }
+
+
+
+
+
+    </script>
+</body>
+</html>

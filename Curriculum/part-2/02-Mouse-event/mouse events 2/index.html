@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+</head>
+<body>
+
+<div class="hoverMe">
+  <p>HOVER ME</p>
+</div>
+<div class="hoverMe">
+  <p>HOVER ME</p>
+</div>
+<div class="hoverMe">
+  <p>HOVER ME</p>
+</div>
+<div id="reset">
+  RESET
+</div>
+
+<div id="x-axis">
+  X-AXIS
+</div>
+<div id="y-axis">
+  Y-AXIS
+</div>
+
+<script>
+function hide(event){
+  event.target.style.opacity = "0"
+}
+
+var a = document.getElementsByClassName("hoverMe");
+for (var i = 0; i < a.length; i++) {
+  a[i].addEventListener("mouseenter", hide)
+}
+
+var button = document.getElementById("reset");
+button.addEventListener("click", reset);
+function reset(event){
+for (var i = 0; i < a.length; i++) {
+  a[i].style.opacity = "1"
+}
+}
+
+</script>
+
+</body>
+</html>

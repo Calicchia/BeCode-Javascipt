@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+</head>
+<body>
+    <script>
+
+        function Shop(title, physic, magic, minLevel, available) {
+        this.title = title;
+        this.physic = physic;
+        this.magic = magic;
+        this.minLevel = minLevel;
+        this.available = available;
+      };
+
+      function displayAll(shop01) {
+        console.log("whole shop")
+        for (let i = 0; i < shop01.length; i++) {
+          console.log(shop01[i]);
+        }
+      }
+
+      function displayAvailable(shop01) {
+        console.log("available")
+        for (let i = 0; i < shop01.length; i++) {
+          if (shop01[i].available){
+            console.log(shop01[i]);
+          }
+        }
+      }
+      function displayMinLvl (shop01) {
+        console.log("minLevel")
+        for (let i = 0; i < shop01.length; i++) {
+          if (shop01[i].minLevel > 10){
+            console.log(shop01[i]);
+          }
+        }
+      }
+
+      let axe01 = new Shop("killer axe", 9, 11, 15, true);
+      let sword01 = new Shop("needle", 5, 3, 18, false);
+      let bow01 = new Shop("long bow", 3, 5, 9, true);
+      let shop = [axe01, sword01, bow01];
+
+
+
+      displayAll(shop);
+      displayAvailable(shop);
+      displayMinLvl(shop);
+
+
+
+    </script>
+</body>
+</html>
