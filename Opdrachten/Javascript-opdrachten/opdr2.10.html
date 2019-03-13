@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+</head>
+<body>
+
+
+    <button  id="validate" name="validate" onclick="sum2()">Validate</button>
+
+    <script>
+
+    // slechte versie: 
+    function sum(){
+      let b = parseInt(prompt("geef een nummer"))
+      let c = parseInt(prompt("geef nog een nummer"))
+      let d = parseInt(prompt("geef het laatste nummer"))
+      let result = b + c + d
+      alert(result);
+      }
+
+      // goede versie:
+      function sum2(){
+        let result = 0;
+        for (let i = 0; i < 3; i++) {
+          result += parseFloat(prompt("geef een nummer"))
+        }
+        alert("de uitkomst is = " + result.toString());
+      }
+
+    </script>
+</body>
+</html>

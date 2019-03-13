@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+</head>
+<body>
+
+  <form>
+    <label for="firstNumber">First number : </label><input type="text" id="firstNumber" name="firstNumber"/><br/>
+    <label for="secondNumber">Second number : </label><input type="text" id="secondNumber" name="secondNumber"/><br/>
+    <button  id="validate" name="validate" onclick="F()">Validate</button>
+</form>
+    <script>
+
+    function F (){
+    let a = document.getElementById('firstNumber').value;
+    let b = document.getElementById('secondNumber').value;
+    alert(a * b);
+    }
+
+    </script>
+</body>
+</html>

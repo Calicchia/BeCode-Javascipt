@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+</head>
+<body>
+
+  <form>
+    <label for="age">Your age : </label><input type="text" id="age" name="age"/><br/>
+    <button  id="validate" name="validate" onclick="F()">Validate</button>
+</form>
+    <script>
+
+    function F(){
+      let age = document.getElementById('age').value;
+      if (age < 18) {
+          alert("je bent minderjarig");
+      } else {
+          alert("je ben meerderjarig")
+      }
+    }
+
+    </script>
+</body>
+</html>

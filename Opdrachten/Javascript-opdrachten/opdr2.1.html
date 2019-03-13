@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+</head>
+<body>
+    <button type="button" onclick="SurfaceRectangle()">Bereken het oppervlak van een rechthoek</button>
+    <button type="button" onclick="PerimeterRectangle()">Bereken de omtrek van een rechthoek</button>
+
+    <script>
+
+    function SurfaceRectangle(){
+      let w,l,area;
+      w = parseInt(prompt("Enter a width"));
+      l = parseInt(prompt("Enter a length"));
+      area = w*l;
+      alert("width = " +w+ "\n" + "lenth = " +l+ "\n" + "area of rectangle = " + area);
+    }
+
+    function PerimeterRectangle(){
+      let w,l,area;
+      w = parseInt(prompt("Enter a width"));
+      l = parseInt(prompt("Enter a length"));
+      area = l+l+w+w;
+      alert("width = " +w+ "\n" + "lenth = " +l+ "\n" + "circumference of rectangle = " + area);
+    }
+    </script>
+</body>
+</html>

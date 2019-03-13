@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+</head>
+<body>
+
+    <button  id="validate" name="validate" onclick="Display()">Validate</button>
+
+    <script>
+
+    let x = prompt("geef een nummer in")
+    let tab = [-2, 1, 4];
+
+
+
+    function subtract(x){
+      for (let i = 0; i < tab.length; i++) {
+      let result = x - tab[i];
+        if (result >= 0) {
+          alert("positief getal");
+        } else {
+          alert("negatief getal");
+        }
+      }
+
+    }
+
+    function Display(){
+      subtract(x);
+    }
+
+
+    </script>
+</body>
+</html>

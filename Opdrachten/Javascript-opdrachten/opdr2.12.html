@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+</head>
+<body>
+
+  <button  id="validate" name="validate" onclick="temperatureConversion()">Validate</button>
+
+  <script>
+
+
+
+  function temperatureConversion(){
+      let temperatuur;
+
+      let x = parseInt(prompt("Het menu : " +
+    "\n0. End of the program" +
+    "\n1. Celsius to Fahrenheit" +
+    "\n2. Celsius to Kelvin" +
+    "\n3. Fahrenheit to Celsius" +
+    "\n4. Fahrenheit to Kelvin" +
+    "\n5. Kelvin to Celsius" +
+    "\n6. Kelvin to Fahrenheit"))
+
+    switch(x) {
+      case 0:
+      break;
+      case 1:
+      temperatuur = parseFloat(prompt("Geef aub de temperatuur"));
+      alert("het resultaat is " + (temperatuur * 1.8 + 32).toString() + " graden Fahrenheit ");
+      break;
+      case 2:
+      temperatuur = parseFloat(prompt("Geef aub de temperatuur"));
+      alert("het resultaat is " + (temperatuur + 273.15).toString() + " Kelvin ");
+      break;
+      case 3:
+      temperatuur = parseFloat(prompt("Geef aub de temperatuur"));
+      alert("het resultaat is " + ((temperatuur - 32)/1.8).toString() + " graden Celsius");
+      break;
+      case 4:
+      temperatuur = parseFloat(prompt("Geef aub de temperatuur"));
+      alert("het resultaat is " + ((temperatuur - 32)*(5/9)+273.15).toString() + " Kelvin");
+      break;
+      case 5:
+      temperatuur = parseFloat(prompt("Geef aub de temperatuur"));
+      alert("het resultaat is " + (temperatuur - 273.15).toString() + " graden Celsius");
+      break;
+      case 6:
+      temperatuur = parseFloat(prompt("Geef aub de temperatuur"));
+      alert("het resultaat is " + ((temperatuur * 9/5)- 459.67).toString() + " graden Celsius");
+      break;
+      }
+}
+
+
+  </script>
+</body>
+</html>

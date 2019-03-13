@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+</head>
+<body>
+
+  <button  id="validate" name="validate" onclick="calcBMI()">Validate</button>
+
+  <script>
+
+
+
+  function calcBMI(){
+        let x = parseFloat(prompt("wat is je gewicht ?"))
+        let z = parseFloat(prompt("wat is je lengte ?"))
+        let result = x/(z**2)
+        result = result.toFixed(2)
+        if (16.5 <= result && result < 18.5){
+          alert(result)
+          alert("dunheid")
+        }else if (18.5 <= result && result < 25){
+          alert(result)
+          alert("normale bouw")
+        }else if (25 <= result && result < 30){
+          alert(result)
+          alert("overgewicht")
+        }else if (30 <= result && result < 35){
+          alert(result)
+          alert("matige overgewicht")
+        }else if (35 <= result && result < 40){
+          alert(result)
+          alert("ernstige overgewicht")
+        }else{
+          alert(result)
+          alert("morbide obesitas")
+        }
+
+  }
+
+
+  </script>
+</body>
+</html>

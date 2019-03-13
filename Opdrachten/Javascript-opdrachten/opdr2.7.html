@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+</head>
+<body>
+
+    <button  id="validate" name="validate" onclick="Display()">Validate</button>
+
+    <script>
+
+    function Display(){
+    let x = prompt("geef een nummer tussen 3 en 1 in")
+    x = parseInt(x)
+
+    switch (x) {
+      case 1:
+        alert("Thank you");
+        break;
+      case 2:
+        alert("Hello");
+        break;
+      case 3:
+        alert("Good bye");
+        break;
+      default:
+        alert("Excuse me, what do you want?");
+    }
+}
+
+    </script>
+</body>
+</html>

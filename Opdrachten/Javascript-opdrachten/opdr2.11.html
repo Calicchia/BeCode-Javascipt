@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+</head>
+<body>
+
+  <button  id="validate" name="validate" onclick="calcAverage()">Validate</button>
+
+  <script>
+
+  function calcAverage(){
+// var mag maar 1 keer gedeclareerd worden 
+    let counter = 0;
+    let result = 0;
+    let average;
+    let getal;
+    let finished = false
+
+    while (!finished){
+
+      getal = parseFloat(prompt("geef een nummer"));
+
+      if (getal >= 0) {
+        result += getal;
+        counter++;
+        average = result/counter;
+        alert("You entered" + counter.toString() + "number" +
+              "\nAverage is " + average.toString());
+      }
+      else if (getal < 0){
+        finished = true
+      }
+      else {
+        alert("try again");
+      }
+
+    }
+
+  }
+
+
+
+
+  </script>
+</body>
+</html>

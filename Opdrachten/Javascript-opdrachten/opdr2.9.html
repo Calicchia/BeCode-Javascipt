@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+</head>
+<body>
+
+    <button  id="validate" name="validate" onclick="testWhile()">Validate</button>
+
+    <script>
+
+    function testWhile(){
+      let input = "";
+
+      while(input.includes("p") === false){
+        input = prompt("please enter a string with the character p: ")
+      }
+      alert(input);
+
+    }
+
+
+
+    </script>
+</body>
+</html>
